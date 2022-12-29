@@ -41,7 +41,7 @@ function draw(event) {
     hue = 0;
   }
   //if the line is 1>, normal direction. >100, reverse direction etc
-  if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+  if (ctx.lineWidth >= 100 || ctx.lineWidth <= 30) {
     direction = !direction;
   }
 
