@@ -9,13 +9,15 @@
 <script>
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = window.screenWidth; //recommended "innerWidth, but didn't work"
+canvas.height = window.screenHeight;
 ctx.strokeStyle = '#BADA55';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 100;
-// ctx.globalCompositeOperation = 'multiply';
+
+// https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
+ctx.globalCompositeOperation = 'multiply';
 
 let isDrawing = false;
 let lastX = 0;
